@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ContexStore } from "../../Utility/ContextStore/ContextAPI";
 import { useNavigate } from "react-router-dom";
-import Bollywood from ".";
 
 export const Articlelist = () => {
   const [data] = useContext(ContexStore);

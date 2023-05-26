@@ -3,7 +3,7 @@ import Add from "./Add";
 
 const LatestArticle = () => {
   return (
-    <>
+    <div className="main">
       <div className="mainart">
         <h1>LatestArticle</h1>;
         <div className="art1">
@@ -76,7 +76,7 @@ const LatestArticle = () => {
       </div>
 
       <Add />
-    </>
+    </div>
   );
 };
 

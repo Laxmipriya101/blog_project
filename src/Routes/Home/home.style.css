@@ -92,4 +92,11 @@
   height: 500px;
   border: 2px solid black;
   text-align: center;
+  /* align-items: center; */
+  margin-top: 10%;
+}
+
+.main {
+  display: flex;
+  gap: 30px;
 }
