@@ -1,0 +1,95 @@
+.text1 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  font-size: 25px;
+  color: white;
+}
+
+.text2 {
+  position: absolute;
+  top: 58%;
+  left: 30%;
+  color: white;
+}
+
+.imgcon {
+  display: flex;
+  justify-content: center;
+}
+
+.pic {
+  height: 350px;
+  width: 550px;
+}
+
+.pic1 {
+  width: 300px;
+  height: 170px;
+  margin-left: 10px;
+}
+
+.pic2 {
+  width: 300px;
+  height: 165px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.latest1 {
+  width: 270px;
+  /* margin-left: 20px; */
+}
+.para {
+  line-height: 1px;
+}
+
+.col {
+  color: gray;
+  line-height: 0px;
+}
+
+.visit {
+  display: flex;
+  justify-content: center;
+}
+
+.second {
+  margin-left: 10px;
+}
+
+.third {
+  margin-left: 10px;
+}
+
+.latest {
+  margin-left: 20%;
+}
+
+.mainart {
+  margin-left: 20%;
+}
+
+.art1 {
+  display: flex;
+  gap: 40px;
+}
+.art2 {
+  display: flex;
+  gap: 40px;
+}
+.art3 {
+  display: flex;
+  gap: 40px;
+}
+.art4 {
+  display: flex;
+  gap: 40px;
+}
+
+.ad {
+  width: 250px;
+  height: 500px;
+  border: 2px solid black;
+  text-align: center;
+}

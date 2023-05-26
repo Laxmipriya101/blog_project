@@ -1,0 +1,9 @@
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
+.the {
+  transform: rotate(-90deg);
+  font-size: 25px;
+}
