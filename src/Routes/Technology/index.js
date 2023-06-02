@@ -1,24 +1,23 @@
 import React from "react";
 import { ContextFunction } from "../../Utility/ContextStore/ContextAPI";
-import { FoodArticle } from "./FoodArticle";
-import { TopFood } from "./TopFood";
-import AddFood from "./AddFood";
+import { TechArt } from "./TechArt";
+import { TechTop } from "./TechTop";
+import "../../App.css";
+import TechAdd from "./TechAdd";
 import { Logo, TopNavigation } from "../../Components";
 
-const Food = () => {
+const Technology = () => {
   return (
     <>
       <Logo />
       <TopNavigation />
       <div className="tech">
         <ContextFunction>
-          <FoodArticle />
+          <TechArt />
           <div>
-            <TopFood />
+            <TechTop />
             <br />
-            <br />
-            <br />
-            <AddFood />
+            <TechAdd />
           </div>
         </ContextFunction>
       </div>
@@ -26,4 +25,4 @@ const Food = () => {
   );
 };
 
-export default Food;
+export default Technology;

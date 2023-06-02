@@ -1,34 +1,33 @@
 import React, { useContext } from "react";
 import { ContexStore } from "../../Utility/ContextStore/ContextAPI";
 import { useNavigate } from "react-router-dom";
-import "./home.style.css";
+import "../../App.css";
 
-const LatestStories = () => {
+export const TopFood = () => {
   const [data] = useContext(ContexStore);
   console.log(data);
   const Navi = useNavigate();
   function handleImg(d) {
-    Navi(`/Home/${d.id}`, { state: d });
+    Navi(`/Food/${d.id}`, { state: d });
   }
 
   return (
-    <div className="latestStorypar">
+    <div>
+      <div className="ArticleListHead"> TopPost</div>
       <div> {data.cat} </div>
-      <div className="latestStoryimg">
-        {data
-          .filter((item) => item.cat === "Home" && item.for === "Banner")
-          .map((d, index) => (
+      {data
+        .filter((item) => item.cat === "Food" && item.for === "TopFood")
+        .map((d, index) => (
+          <div key={index}>
+            {/* <div>{d.title}</div> */}
             <img
+              className="FoodTopimg"
               onClick={() => handleImg(d)}
               src={d.img}
-              key={index}
               alt="no photo"
-              className="fisrtImagess"
             />
-          ))}
-      </div>
+          </div>
+        ))}
     </div>
   );
 };
-
-export default LatestStories;

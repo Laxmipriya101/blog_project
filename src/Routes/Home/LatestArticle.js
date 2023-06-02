@@ -1,82 +1,47 @@
-import React from "react";
-import Add from "./Add";
+import React, { useContext } from "react";
+import { ContexStore } from "../../Utility/ContextStore/ContextAPI";
+import { useNavigate } from "react-router-dom";
+import "./home.style.css";
 
 const LatestArticle = () => {
+  const [data] = useContext(ContexStore);
+  console.log(data);
+  const Navi = useNavigate();
+  function handleImg(d) {
+    Navi(`/Home/${d.id}`, { state: d });
+  }
+
   return (
-    <div className="main">
-      <div className="mainart">
-        <h1>LatestArticle</h1>;
-        <div className="art1">
-          <img
-            src="https://resources.thomascook.in/images/holidays/sightSeeing/swaminarayantemple.jpg "
-            alt=""
-          />
-          <span>
-            <h3>Catch Waves With </h3>
-            <h3>an adventure guide</h3>
-            <h5 className="para col">
-              Gujarat is vestly underrated and it's a
-            </h5>
-            <h5 className="para col">
-              mystery to us why the region isn't more well-
-            </h5>
-          </span>
-        </div>
-        <br />
-        <div className="art2">
-          <img
-            src="https://resources.thomascook.in/images/holidays/sightSeeing/swaminarayantemple.jpg "
-            alt=""
-          />
-          <span>
-            <h3>Catch Waves With </h3>
-            <h3>an adventure guide</h3>
-            <h5 className="para col">
-              Gujarat is vestly underrated and it's a
-            </h5>
-            <h5 className="para col">
-              mystery to us why the region isn't more well-
-            </h5>
-          </span>
-        </div>
-        <br />
-        <div className="art3">
-          <img
-            src="https://resources.thomascook.in/images/holidays/sightSeeing/swaminarayantemple.jpg "
-            alt=""
-          />
-          <span>
-            <h3>Catch Waves With </h3>
-            <h3>an adventure guide</h3>
-            <h5 className="para col">
-              Gujarat is vestly underrated and it's a
-            </h5>
-            <h5 className="para col">
-              mystery to us why the region isn't more well-
-            </h5>
-          </span>
-        </div>
-        <br />
-        <div className="art4">
-          <img
-            src="https://resources.thomascook.in/images/holidays/sightSeeing/swaminarayantemple.jpg "
-            alt=""
-          />
-          <span>
-            <h3>Catch Waves With </h3>
-            <h3>an adventure guide</h3>
-            <h5 className="para col">
-              Gujarat is vestly underrated and it's a
-            </h5>
-            <h5 className="para col">
-              mystery to us why the region isn't more well-
-            </h5>
-          </span>
+    <>
+      <div className="latestArticlePar">
+        <h1 className="late">The LatestArticle</h1>
+        <div>
+          {data
+            .filter(
+              (item) => item.cat === "Home" && item.for === "LatestArticle "
+            )
+            .map((d, index) => (
+              <div key={index} className="latestArticleContainer">
+                <div>
+                  <img
+                    className="hov"
+                    onClick={() => handleImg(d)}
+                    src={d.img}
+                    alt="no photo"
+                  />
+                </div>
+                <div className="LAtextConterinr">
+                  <div>{d.title}</div>
+                  <div>{d.Overview}</div>
+
+                  <br />
+                  <div>{d.date}</div>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
-
-      <Add />
-    </div>
+    </>
   );
 };
 

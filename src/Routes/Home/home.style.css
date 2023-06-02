@@ -37,11 +37,17 @@
 }
 
 .latest1 {
-  width: 270px;
+  width: 290px;
   /* margin-left: 20px; */
 }
 .para {
   line-height: 1px;
+}
+
+.lateHead {
+  position: absolute;
+  top: 63%;
+  left: 19.5%;
 }
 
 .col {
@@ -99,4 +105,77 @@
 .main {
   display: flex;
   gap: 30px;
+}
+
+.mainImg {
+  display: flex;
+  justify-content: center;
+}
+
+.firstImage {
+  /* max-height: 520px; */
+  display: grid;
+  grid-row: span 2;
+  width: 600px;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.bannerImg {
+  display: grid;
+  width: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-height: 100%;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.SecondImage {
+  width: 300px;
+  max-height: 250px;
+  grid-column: span 2;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.LatestImg {
+  display: grid;
+  width: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-height: 100%;
+  gap: 10px;
+  justify-content: center;
+}
+
+.LatestImg1 {
+  display: grid;
+  width: 45vh;
+  max-height: 100%;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 30px;
+}
+.set {
+  /* display: flex;
+  align-items: center; */
+}
+
+.fisrtImagess {
+  width: 450px;
+}
+
+.homeTopsmallimg {
+  width: 101px;
+  height: 100px;
+}
+
+.LAtextConterinr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.latestArticleContainer {
+  display: flex;
+  gap: 10px;
 }

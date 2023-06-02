@@ -1,0 +1,63 @@
+.BollywoodContainer {
+  gap: 40px;
+  /* width: 80%; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ArticleList {
+  grid-column: span 2;
+}
+
+.ArticleListHead {
+  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.TopPostsPar {
+  grid-column: span 1;
+}
+
+.TopPostAd {
+  padding-top: 8rem;
+}
+
+.h4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hov {
+  width: 220px;
+  height: 200px;
+  border-radius: 6px;
+}
+
+.bollywood {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hov:hover {
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+h4:hover {
+  color: blueviolet;
+  text-shadow: 0px 1px 1px blueviolet;
+}
+.getStarted {
+  display: none;
+}
+
+.ad {
+  width: 250px;
+  height: 500px;
+  border: 2px solid black;
+  text-align: center;
+  /* align-items: center; */
+  margin-top: 10%;
+}

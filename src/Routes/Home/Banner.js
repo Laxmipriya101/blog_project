@@ -1,36 +1,45 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ContexStore } from "../../Utility/ContextStore/ContextAPI";
+import { useNavigate } from "react-router-dom";
 import "./home.style.css";
+
 const Banner = () => {
+  const [data] = useContext(ContexStore);
+  console.log(data);
+  const Navi = useNavigate();
+  function handleImg(d) {
+    Navi(`/Home/${d.id}`, { state: d });
+  }
+
   return (
-    <>
-      <div className="imgcon">
-        <div>
-          <img
-            className="pic"
-            src="https://images.unsplash.com/photo-1534531409543-069f6204c5b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUyfHxmb3Jlc3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <p className="text1">Title of vertical gallery</p>
-          <p className="text2">Travel/August 21 2017</p>
-        </div>
-        <div className="box">
-          <div>
+    <div className="mainImg">
+      <div> {data.cat} </div>
+      <div className="bannerImg">
+        {data
+          .filter((item) => item.cat === "Home" && item.for === "Banner")
+          .map((d, index) => (
             <img
-              className="pic1"
-              src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODJ8fGZvcmVzdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
-              alt=""
+              onClick={() => handleImg(d)}
+              src={d.img}
+              key={index}
+              alt="no photo"
+              className="firstImage "
             />
-          </div>
-          <div>
+          ))}
+
+        {data
+          .filter((item) => item.cat === "Home" && item.for === "Banner1")
+          .map((d, index) => (
             <img
-              className="pic2"
-              src="https://images.unsplash.com/photo-1446483050676-bd2fdf3ac2d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGZvcmVzdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
-              alt=""
+              onClick={() => handleImg(d)}
+              src={d.img}
+              key={index}
+              alt="no photo"
+              className="SecondImage "
             />
-          </div>
-        </div>
+          ))}
       </div>
-    </>
+    </div>
   );
 };
 
